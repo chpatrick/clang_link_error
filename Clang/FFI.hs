@@ -3,8 +3,9 @@
 module Clang.FFI where
 
 import Foreign
+import Foreign.C
 
-data CXIndexImpl
+type CXIndexImpl = CInt
 type CXIndex = Ptr CXIndexImpl
 newtype ClangIndex = ClangIndex { indexPtr :: ForeignPtr CXIndexImpl }
 
